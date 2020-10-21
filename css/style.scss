@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$color-orange:#DE6A40;
+$color-blue: #357D7B;
+$color-ocre: #B44531;
+$color-yellow: #F9B23F;
+$color-whitesmoke:whitesmoke;
+
+@mixin shadow(){
+    -webkit-box-shadow: 18px 8px 27px -4px rgba(194,194,194,1);
+    -moz-box-shadow: 18px 8px 27px -4px rgba(194,194,194,1);
+    box-shadow: 18px 8px 27px -4px rgba(194,194,194,1);
+}
+
+
+h2{
+     color:$color-blue ;
+     font-family: 'Work Sans', sans-serif,bold;
+     font-weight: bold;
+     font-size: 40px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+ h3 {
+    color: $color-blue;
+    font-family: 'Work Sans', sans-serif,medium; 
+    font-size:35px;   
+}
+h4{
+    margin-left: 5px;
+    font-family: 'Work Sans', sans-serif,bold;
+    font-weight: bold;
+    color: $color-yellow;
+    font-size: 30px;
+  }
+p{
+    font-family: 'Work Sans', sans-serif,medium;
+    font-weight: medium;
+    color: black; 
+}
+span{
+    font-family: 'Work Sans', sans-serif,medium;
+    font-weight: medium;
+    color: gray; 
+    
+    font-size: 25px;
+}
+
+button{
+    background-color: $color-orange;
+    border-radius: 2px;
+    border:1px solid $color-orange;
+    height: 30px;
+
+    font-family: 'Work Sans', sans-serif, bold;
+    color: $color-whitesmoke;
+    font-size: 12px;
+}
+
+.paso1, .paso2, .paso3{
+    
+    position: relative;
+    display: inline-block;
+    text-align: center;
+
+    img{
+        height: 700px;
+        opacity: 0.5;
+
+    }
+    h3{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        font-size: 50px;
+    }
+    h3:hover{
+        color: #DE6A40;
+    } 
+ }
+
+ .minimenu{
+    grid-area: minimenu;
+    
+
+   ul{   
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content: flex-start;
+    float: left;
+    padding-left: 10em;
+    margin: 0;
+    
+
+    font-family: 'Work Sans', sans-serif,medium;
+    font-size: 35px;   
+  }  
+   ul :hover{
+    color: #DE6A40;
+ }
+    li{ 
+    list-style: none;   
+    margin:10px;
+    border-bottom: rgb(68, 67, 67) 1px solid;
+    color:#357D7B;
+    font-family: 'Work Sans', sans-serif,medium; 
+      font-size:25px; 
+  }
+
+  .minimenu a{
+  text-decoration:none;
+  }
+ }
+ 
+ .card1, .card2, .card3{
+        
+        background-color: white;
+
+        margin: auto;
+        width: 500px;
+        height: 700px;
+        border: 1px solid rgb(214, 211, 211);
+        -webkit-box-shadow: 18px 8px 27px -4px rgba(194,194,194,1);
+      -moz-box-shadow: 18px 8px 27px -4px rgba(194,194,194,1);
+      box-shadow: 18px 8px 27px -4px rgba(194,194,194,1);
+    
+
+      .contentcard{
+        margin: 10px;
+      }
+      img{
+        height: 300px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        float: center;
+        border-radius: 5px 5px 0 0;
+      }
+      h4{
+        margin-left: 5px;
+        margin: 0px;
+        font-family: 'Work Sans', sans-serif,bold;
+        font-weight: bold;
+        color: #F9B23F;
+        font-size: 30px;
+      }
+       p{
+        font-size: 20px;
+      }
+      i .fa-thumbs-up{
+        color: #357D7B;
+        width: 50px;
+        height: 90px;
+      }
+      button{
+        font-size: 20px;
+      }
+}
+
+.card4, .card5, .card6{
+    
+        
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+     
+      img{
+        width: 200px;
+      }
+    
+      button{
+        font-size:30px;
+        height: 35px;
+    
+        margin-top: 5px; 
+      }
+}
+@media (max-width:400px){        
+    #menu{
+        position: relative;
+        top: -50;
+        background:$color-orange;
+        opacity: 0;
+        width: 0px;
+        height: 135px;
+        transition: width 0.5s, opacity 0.9s; 
+        
+    }
+    #menu:target{
+                width: 180px;
+                opacity: 95%;
+                z-index: 3;
+     }    
+
+    header{
+        position: absolute;
+        z-index: 2;
+    } 
+        a{
+            position: absolute;
+            visibility: visible;
+            color: $color-blue;
+        }
+
+        menu{
+            position: absolute;
+            top: 0;
+        }
+        nav{
+            a{
+                visibility: visible;
+                position: absolute;
+                top: 0px;
+            }
+            ul{
+            display: flex;
+            flex-direction: column; 
+            margin-left: 60px;
+            list-style: none;
+                li{
+                    font-family: 'Work Sans', sans-serif,bold;
+                    font-size: 16px;
+                    color:$color-blue;
+                    }      
+                }
+            }
+    }
+
